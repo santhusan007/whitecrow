@@ -96,8 +96,8 @@ p {
 }
 
 section {
-    padding-top: 30px;
-    padding-top: 20px;
+    padding-top: 40px;
+    padding-top: 40px;
 }
 
 aside {
@@ -317,9 +317,9 @@ footer {
     }
     
     section {
-        min-height: 200px;
-        padding-top: 30px;
-        padding-bottom: 30px;
+        min-height: 250px;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 
 }
