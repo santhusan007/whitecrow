@@ -40,7 +40,55 @@
 	right: 0;
 	bottom: 5px;
     z-index: 20;
+      }
+
+
+    .myBtn{
+    padding: 0;
+    list-style-type: none;
+    align-items: center;
 }
+
+.myBtn li {
+    box-sizing: border-box;
+    width: 30em;
+    height: 3em;
+    font-size: 15px;
+    border-radius: 0.5em;
+    margin: 3em;
+    box-shadow: 0 0 1em rgba(0,0,0,0.2);
+    color: white;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    line-height: 3em;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.myBtn li:nth-child(odd) {
+    background: linear-gradient(to right, orange, tomato);
+    text-align: left;
+    padding-left: 5%;
+    transform: perspective(500px) rotateY(45deg);
+}
+
+.myBtn li:nth-child(even) {
+    background: linear-gradient(to left, orange, tomato);
+    text-align: right;
+    padding-right: 15%;
+    transform: perspective(500px) rotateY(-45deg);
+}
+
+.myBtn li:nth-child(odd):hover {
+    transform: perspective(300px) rotateY(45deg);
+    padding-left: 5%;
+}
+
+.myBtn li:nth-child(even):hover {
+    transform: perspective(300px) rotateY(-45deg);
+    padding-right: 15%;
+}
+
     </style>
   </head>
   <body>
@@ -97,12 +145,19 @@
                 <hr>
                 <!-- <a href="#video-background" id="toggleVideo" data-toggle="collapse" class="btn btn-primary btn-xl">Toggle Video</a> &nbsp; <a href="#one" class="btn btn-primary btn-xl page-scroll">Get Started</a> -->
             </div>
-            <a href="#bora">
+          <div class="myBtn">
+              <li><img style="width: 40px; height: 40px;border-radius: 50%;padding-left: -10px; " src="images/logo/chirst.jpeg" alt=""> CHRIST COLLEGE PUNE</li>
+              <li>BORA CLASSES PUNE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img style="width: 30px; height: 40px;border-radius: 50%;padding-left: -10px; " src="images/logo/bora.jpeg" alt=""></li>
+              <li><img style="width: 40px; height: 40px;border-radius: 50%;padding-left: -10px; " src="images/logo/ris.jpeg" alt="">RAHUL INTERNATIONAL SCHOOL PUNE</li> 
+              <li>VISION INTERNATIONAL PUNE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img style="width: 40px; height: 40px;border-radius: 50%; " src="images/logo/vision.jpeg" alt=""></li>
+              <li><img style="width: 40px; height: 40px;border-radius: 50%;padding-left: -10px; " src="images/logo/ergo.jpeg" alt="">ERGONOMIC EDUCARE MUMBAI</li>
+          </div>
+            <!-- <a href="#bora">
             <button type="button" class="btn btn-danger btn-lg " style="width: 80px;margin: 20px;">Bora</button></a>
             <a href="#rahul"><button type="button" class="btn btn-danger btn-lg "style="width: 80px;margin: 20px;">Rahul </button></a>
             <a href="#christ"><button type="button" class="btn btn-danger btn-lg "style="width: 80px;margin: 20px;">Christ </button></a>
             <a href="#vision"><button type="button" class="btn btn-danger btn-lg "style="width: 80px;margin: 20px;">Vision </button></a>
-            <a href="#ergonomic"><button type="button" class="btn btn-danger btn-lg  "style="width: 120px;margin: 20px;">Ergonomic</button></a>
+            <a href="#ergonomic"><button type="button" class="btn btn-danger btn-lg  "style="width: 120px;margin: 20px;">Ergonomic</button></a> -->
         </div>
         <!-- <video autoplay="" loop="" class="fillWidth fadeIn wow collapse in" data-wow-delay="0.5s" poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Traffic-blurred2.jpg" id="video-background">
             <source src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Traffic-blurred2.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
