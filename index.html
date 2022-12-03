@@ -48,46 +48,49 @@
     list-style-type: none;
     align-items: center;
 }
-
-.myBtn li {
-    box-sizing: border-box;
-    width: 30em;
-    height: 3em;
-    font-size: 15px;
-    border-radius: 0.5em;
-    margin: 3em;
-    box-shadow: 0 0 1em rgba(0,0,0,0.2);
-    color: white;
-    font-family: sans-serif;
-    text-transform: capitalize;
-    line-height: 3em;
-    transition: 0.3s;
-    cursor: pointer;
+.box {
+  background: linear-gradient(to right, gold, darkorange);
+  color: white;
+  --width: 300px;
+  margin-bottom: 20px;
+  --height: calc(var(--width) / 5);
+  width: var(--width);
+  height: var(--height);
+  text-align: center;
+  line-height: var(--height);
+  font-size: calc(var(--height) / 2.5);
+  font-family: sans-serif;
+  letter-spacing: 0.2em;
+  border: 1px solid darkgoldenrod;
+  border-radius: 2em;
+  transform: perspective(500px) rotateY(-15deg);
+  text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
 }
 
-.myBtn li:nth-child(odd) {
-    background: linear-gradient(to right, orange, tomato);
-    text-align: left;
-    padding-left: 5%;
-    transform: perspective(500px) rotateY(45deg);
+.box:hover {
+  transform: perspective(500px) rotateY(15deg);
+  text-shadow: -6px 3px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: -2px 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.myBtn li:nth-child(even) {
-    background: linear-gradient(to left, orange, tomato);
-    text-align: right;
-    padding-right: 15%;
-    transform: perspective(500px) rotateY(-45deg);
+.box::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, white, transparent);
+  left: -100%;
+  transition: 0.5s;
 }
 
-.myBtn li:nth-child(odd):hover {
-    transform: perspective(300px) rotateY(45deg);
-    padding-left: 5%;
+.box:hover::before {
+  left: 100%;
 }
 
-.myBtn li:nth-child(even):hover {
-    transform: perspective(300px) rotateY(-45deg);
-    padding-right: 15%;
-}
 
     </style>
   </head>
@@ -109,7 +112,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" style="color: white;" href="#first"><i class="ion-ios-analytics-outline"></i> White Crow</a>
+                <a class="navbar-brand page-scroll" style="color: white;" href="#first"><img style="width: 150px;height: 55px;"  src="images/logo.jpeg" alt=""></a>
             </div>
             <div class="navbar-collapse collapse" id="bs-navbar">
                 <ul class="nav navbar-nav">
@@ -145,24 +148,25 @@
                 <hr>
                 <!-- <a href="#video-background" id="toggleVideo" data-toggle="collapse" class="btn btn-primary btn-xl">Toggle Video</a> &nbsp; <a href="#one" class="btn btn-primary btn-xl page-scroll">Get Started</a> -->
             </div>
-          <div class="myBtn">
-              <li><img style="width: 40px; height: 40px;border-radius: 50%;padding-left: -10px; " src="images/logo/chirst.jpeg" alt=""> CHRIST COLLEGE PUNE</li>
-              <li>BORA CLASSES PUNE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img style="width: 30px; height: 40px;border-radius: 50%;padding-left: -10px; " src="images/logo/bora.jpeg" alt=""></li>
-              <li><img style="width: 40px; height: 40px;border-radius: 50%;padding-left: -10px; " src="images/logo/ris.jpeg" alt="">RAHUL INTERNATIONAL SCHOOL PUNE</li> 
-              <li>VISION INTERNATIONAL PUNE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img style="width: 40px; height: 40px;border-radius: 50%; " src="images/logo/vision.jpeg" alt=""></li>
-              <li><img style="width: 40px; height: 40px;border-radius: 50%;padding-left: -10px; " src="images/logo/ergo.jpeg" alt="">ERGONOMIC EDUCARE MUMBAI</li>
+            <div style="align-items: center;margin-left: 25%;">
+            <div class="box">BUTTON</div>
+            <div class="box">BUTTON</div>
+            <div class="box">BUTTON</div>
+            <div class="box">BUTTON</div>
+            <div class="box">BUTTON</div>
           </div>
             <!-- <a href="#bora">
             <button type="button" class="btn btn-danger btn-lg " style="width: 80px;margin: 20px;">Bora</button></a>
             <a href="#rahul"><button type="button" class="btn btn-danger btn-lg "style="width: 80px;margin: 20px;">Rahul </button></a>
             <a href="#christ"><button type="button" class="btn btn-danger btn-lg "style="width: 80px;margin: 20px;">Christ </button></a>
             <a href="#vision"><button type="button" class="btn btn-danger btn-lg "style="width: 80px;margin: 20px;">Vision </button></a>
-            <a href="#ergonomic"><button type="button" class="btn btn-danger btn-lg  "style="width: 120px;margin: 20px;">Ergonomic</button></a> -->
+            <a href="#ergonomic"><button type="button" class="btn btn-danger btn-lg  "style="width: 120px;margin: 20px;">Ergonomic</button></a>  -->
         </div>
         <!-- <video autoplay="" loop="" class="fillWidth fadeIn wow collapse in" data-wow-delay="0.5s" poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Traffic-blurred2.jpg" id="video-background">
             <source src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Traffic-blurred2.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
         </video> -->
-    </header><br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+    </header>
     <section class="bg-primary" id="bora">
         <div class="container">
             <div class="row">
@@ -241,7 +245,8 @@
                   </div>
             </div>
         </div>
-    </section><br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+    </section>
     <section class="bg-primary" id="rahul">
         <div class="container">
             <div class="row">
@@ -290,7 +295,8 @@
                   </div>
             </div>
         </div>
-    </section><br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+    </section>
     <section class="bg-primary" id="christ">
         <div class="container">
             <div class="row">
@@ -362,7 +368,8 @@
                   </div>
             </div>
         </div>
-    </section><br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+    </section>
    
     <section class="bg-primary" id="vision">
         <div class="container">
@@ -396,7 +403,8 @@
                   </div>
             </div>
         </div>
-    </section><br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+    </section>
    
     <section class="bg-primary" id="ergonomic">
         <div class="container">
@@ -475,7 +483,8 @@
                   </div>
             </div>
         </div>
-    </section><br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+    </section>
    
     <section id="last">
         <div class="container">
