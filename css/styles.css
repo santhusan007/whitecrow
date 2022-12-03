@@ -95,8 +95,8 @@ p {
 }
 
 section {
-    padding-top: 40px;
-    padding-top: 40px;
+    padding-top: 10px;
+    padding-top: 10px;
 }
 
 aside {
@@ -245,7 +245,7 @@ header {
 header .header-content {
     position: relative;
     width: 100%;
-    padding: 50px 15px;
+    padding: 20px 15px;
     text-align: center;
     z-index: 2;
 }
@@ -317,9 +317,9 @@ footer {
     }
     
     section {
-        min-height: 600px;
-        padding-top: 40px;
-        padding-bottom: 40px;
+        min-height: 800px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
 }
