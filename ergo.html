@@ -30,6 +30,37 @@
         display: block;
         width: 100%;
       }
+      .swiper-button-next {    
+  background-image: url('/images/next_.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  width: 20px;
+  height: 25px;
+  box-shadow: 0 0 5px rgb(248, 247, 247);
+  
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev {
+ 
+  background-image: url('/images/back_.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  width: 20px;
+  height: 25px;
+  box-shadow: 0 0 5px rgb(248, 247, 247);
+  
+}
+
+.swiper-button-prev::after {
+  display: none;
+}
+
 
       .socialswa{
 	width: 50px;
@@ -133,7 +164,7 @@
         </video> -->
         <div class="container">
             <div class="row">
-                <h3 class="text-center"> Ergonomic Educare </h3><br>
+                <h3 class="text-center"> ERGONOMIC EDUCARE MUMBAI </h3><br>
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -203,7 +234,8 @@
                             <img src="images/ergonomic/22.jpg" />
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                   </div>
             </div>
         </div>
@@ -239,9 +271,10 @@
             shadowOffset: 20,
             shadowScale: 0.94,
           },
-          pagination: {
-            el: ".swiper-pagination",
-          },
+          navigation: {
+        nextEl: '.swiper-button-next',
+     prevEl: '.swiper-button-prev',
+         },
         });
       </script>
   </body>
