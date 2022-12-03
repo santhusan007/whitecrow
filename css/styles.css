@@ -245,7 +245,7 @@ header {
 header .header-content {
     position: relative;
     width: 100%;
-    padding: 5px 5px;
+    padding: 10px 15px;
     text-align: center;
     z-index: 2;
 }
@@ -292,8 +292,8 @@ footer {
 
     header .header-content {
         position: absolute;
-        top: 10%;
-        padding: 0 10px;
+        top: 50%;
+        padding: 0 50px;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
